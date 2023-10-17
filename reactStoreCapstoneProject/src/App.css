@@ -20,6 +20,10 @@ a:hover {
   color: hsl(59, 34%, 24%);
 }
 
+label {
+  font-weight: bold;
+}
+
 .btn {
   border: solid 1px;
 }

@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import "../../styles/users.css";
 
 export default function RegisterPage() {
   // Formik used for user feedback
