@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <>
-      <h1>Cart</h1>
+      <h1>Products In Cart</h1>
       <ul className="list-group">
         {productCart.map((product) => (
           <li key={product.id}>{product.name}</li>

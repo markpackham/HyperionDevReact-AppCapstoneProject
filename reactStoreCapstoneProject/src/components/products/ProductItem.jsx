@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteProduct } from "../../store/productSlice";
+import { addToCart } from "../../store/productCartSlice";
 import "../../styles/products.css";
 
 const ProductItem = ({ description, id, img, name, price }) => {
@@ -11,6 +12,12 @@ const ProductItem = ({ description, id, img, name, price }) => {
     dispatch(deleteProduct({ id: id }));
   };
 
+  //Add to cart array
+  const handleAddToCartClick = () => {
+    const cartProduct = { id: id, name: name, price: price };
+    dispatch(addToCart(cartProduct));
+  };
+
   return (
     <>
       <li className="list-group-item">
@@ -19,6 +26,9 @@ const ProductItem = ({ description, id, img, name, price }) => {
           <span>{name}</span>
           <span>{description}</span>
           <img className="product-img" src={img} alt={name} />
+          <button onClick={handleAddToCartClick} className="btn btn-success">
+            Add To Cart
+          </button>
           <button onClick={handleDeleteClick} className="btn btn-danger">
             Delete
           </button>

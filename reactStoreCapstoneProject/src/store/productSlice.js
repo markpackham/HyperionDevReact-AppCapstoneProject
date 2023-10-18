@@ -77,7 +77,7 @@ const productSlice = createSlice({
   ],
 
   reducers: {
-    // Delete Todo
+    // Delete Product
     deleteProduct: (state, action) => {
       return state.filter((product) => product.id !== action.payload.id);
     },
