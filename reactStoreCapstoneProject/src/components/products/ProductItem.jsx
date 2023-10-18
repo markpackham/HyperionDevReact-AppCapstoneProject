@@ -10,7 +10,8 @@ const ProductItem = ({ description, id, img, name, price }) => {
   const handleAddToCartClick = () => {
     const cartProduct = {
       description: description,
-      id: id,
+      // Make sure every item added to cart has a unique id
+      id: crypto.randomUUID(),
       img: img,
       name: name,
       price: price,
