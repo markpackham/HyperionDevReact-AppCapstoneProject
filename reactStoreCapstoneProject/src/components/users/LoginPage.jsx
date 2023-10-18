@@ -3,11 +3,13 @@ import * as Yup from "yup";
 import "../../styles/users.css";
 
 export default function LoginPage() {
+  // Formik used for user feedback
   const formik = useFormik({
     initialValues: {
       userName: "",
       password: "",
     },
+    // Yup used for validating objects entered
     validationSchema: Yup.object({
       userName: Yup.string()
         .max(20, "Must be 20 characters or less")
