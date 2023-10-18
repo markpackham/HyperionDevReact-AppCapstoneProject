@@ -4,11 +4,13 @@ import CartItem from "./CartItem";
 const Cart = () => {
   // Grab products from store
   const productCart = useSelector((state) => state.productCart);
-  console.log(productCart);
 
   return (
     <>
       <h1>Products In Cart</h1>
+      {productCart.length > 0 && (
+        <h4>Number of Items in cart {productCart.length}</h4>
+      )}
       <ul className="list-group">
         {productCart.map((product) => (
           <CartItem
