@@ -1,8 +1,12 @@
+import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { setUserName } from "../../store/userSlice";
 import "../../styles/users.css";
 
 export default function LoginPage() {
+  const dispatch = useDispatch();
+
   // Formik used for user feedback
   const formik = useFormik({
     initialValues: {
@@ -18,8 +22,8 @@ export default function LoginPage() {
         .min(8, "Must be 8 characters or more")
         .required("Required"),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: () => {
+      dispatch(setUserName(formik.values.userName));
     },
   });
   return (

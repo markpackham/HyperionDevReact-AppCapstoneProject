@@ -10,7 +10,7 @@ const Header = () => {
 
   // Log user out
   const handleLogout = () => {
-    dispatch(setUserName("JIMMY"));
+    dispatch(setUserName("Logged out"));
   };
 
   return (
