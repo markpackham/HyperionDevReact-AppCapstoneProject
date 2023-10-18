@@ -5,11 +5,13 @@ import "../../styles/users.css";
 export default function LoginPage() {
   const formik = useFormik({
     initialValues: {
-      email: "",
+      userName: "",
       password: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Invalid email address").required("Required"),
+      userName: Yup.string()
+        .max(20, "Must be 20 characters or less")
+        .required("Required"),
       password: Yup.string()
         .min(8, "Must be 8 characters or more")
         .required("Required"),
@@ -24,39 +26,37 @@ export default function LoginPage() {
       <hr />
       <form onSubmit={formik.handleSubmit}>
         <div className="column">
-          <div className="form-group">
-            <label htmlFor="email">Email Address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Enter Email"
-              {...formik.getFieldProps("email")}
-              className="form-control m-2"
-            />
-            {formik.touched.email && formik.errors.email ? (
-              <div className="fw-bold text-danger mb-1">
-                {formik.errors.email}
-              </div>
-            ) : null}
-          </div>
+          <label htmlFor="lastName">Username</label>
+          <input
+            id="userName"
+            name="userName"
+            type="text"
+            placeholder="Username"
+            {...formik.getFieldProps("userName")}
+            className="form-control m-2"
+          />
+          {formik.touched.userName && formik.errors.userName ? (
+            <div className="fw-bold text-danger mb-1">
+              {formik.errors.userName}
+            </div>
+          ) : null}
+        </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="Password"
-              {...formik.getFieldProps("password")}
-              className="form-control m-2"
-            />
-            {formik.touched.password && formik.errors.password ? (
-              <div className="fw-bold text-danger mb-1">
-                {formik.errors.password}
-              </div>
-            ) : null}
-          </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            {...formik.getFieldProps("password")}
+            className="form-control m-2"
+          />
+          {formik.touched.password && formik.errors.password ? (
+            <div className="fw-bold text-danger mb-1">
+              {formik.errors.password}
+            </div>
+          ) : null}
         </div>
 
         <button className="btn btn-primary" type="submit">

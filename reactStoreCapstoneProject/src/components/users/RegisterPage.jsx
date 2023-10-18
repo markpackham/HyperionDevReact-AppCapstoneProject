@@ -8,6 +8,7 @@ export default function RegisterPage() {
     initialValues: {
       firstName: "",
       lastName: "",
+      userName: "",
       email: "",
       password: "",
       passwordConfirm: "",
@@ -18,6 +19,9 @@ export default function RegisterPage() {
         .max(15, "Must be 15 characters or less")
         .required("Required"),
       lastName: Yup.string()
+        .max(20, "Must be 20 characters or less")
+        .required("Required"),
+      userName: Yup.string()
         .max(20, "Must be 20 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -75,6 +79,23 @@ export default function RegisterPage() {
             {formik.touched.lastName && formik.errors.lastName ? (
               <div className="fw-bold text-danger mb-1">
                 {formik.errors.lastName}
+              </div>
+            ) : null}
+          </div>
+
+          <div className="column">
+            <label htmlFor="lastName">Username</label>
+            <input
+              id="userName"
+              name="userName"
+              type="text"
+              placeholder="Username"
+              {...formik.getFieldProps("userName")}
+              className="form-control m-2"
+            />
+            {formik.touched.userName && formik.errors.userName ? (
+              <div className="fw-bold text-danger mb-1">
+                {formik.errors.userName}
               </div>
             ) : null}
           </div>
