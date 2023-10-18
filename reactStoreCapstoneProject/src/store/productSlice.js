@@ -76,14 +76,9 @@ const productSlice = createSlice({
     },
   ],
 
-  reducers: {
-    // Delete Product
-    deleteProduct: (state, action) => {
-      return state.filter((product) => product.id !== action.payload.id);
-    },
-  },
+  reducers: {},
 });
 
-export const { deleteProduct } = productSlice.actions;
+// export const {  } = productSlice.actions;
 
 export default productSlice.reducer;

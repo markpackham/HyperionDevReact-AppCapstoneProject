@@ -7,7 +7,7 @@ import RegisterPage from "./components/users/RegisterPage";
 import Home from "./components/Home";
 import LoginPage from "./components/users/LoginPage";
 import Products from "./components/products/Products";
-import Cart from "./components/Cart";
+import Cart from "./components/products/Cart";
 
 function App() {
   return (
