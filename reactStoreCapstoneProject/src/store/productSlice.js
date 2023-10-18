@@ -76,7 +76,6 @@ const productSlice = createSlice({
     },
   ],
 
-  // Add Product
   reducers: {
     // Delete Todo
     deleteProduct: (state, action) => {

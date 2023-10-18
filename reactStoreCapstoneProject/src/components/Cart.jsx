@@ -1,8 +1,19 @@
+import { useSelector } from "react-redux";
+
 const Cart = () => {
+  // Grab products from store
+  const productCart = useSelector((state) => state.productCart);
+  console.log(productCart);
+
   return (
-    <div>
+    <>
       <h1>Cart</h1>
-    </div>
+      <ul className="list-group">
+        {productCart.map((product) => (
+          <li key={product.id}>{product.name}</li>
+        )) || <h3>Loading ...</h3>}
+      </ul>
+    </>
   );
 };
 
