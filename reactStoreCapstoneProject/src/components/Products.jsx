@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import ShippingHelpInfo from "./ShippingHelpInfo";
 
 const Products = () => {
   // Grab products from store
@@ -7,6 +8,7 @@ const Products = () => {
   return (
     <div>
       <h1>Products</h1>
+      <ShippingHelpInfo />
       <ul className="list-group">
         {products.map((product) => (
           <li key={product.id}>
