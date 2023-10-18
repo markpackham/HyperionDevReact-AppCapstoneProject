@@ -23,6 +23,7 @@ export default function LoginPage() {
         .required("Required"),
     }),
     onSubmit: () => {
+      // Update Header with user login username
       dispatch(setUserName(formik.values.userName));
     },
   });

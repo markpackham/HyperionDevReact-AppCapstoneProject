@@ -1,8 +1,12 @@
+import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { setUserName } from "../../store/userSlice";
 import "../../styles/users.css";
 
 export default function RegisterPage() {
+  const dispatch = useDispatch();
+
   // Formik used for user feedback
   const formik = useFormik({
     initialValues: {
@@ -35,8 +39,9 @@ export default function RegisterPage() {
         .oneOf([Yup.ref("password"), null], "Passwords must match")
         .required("Required"),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: () => {
+      // Update Header with user login username
+      dispatch(setUserName(formik.values.userName));
     },
   });
   return (
