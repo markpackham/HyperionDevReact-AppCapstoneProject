@@ -11,6 +11,14 @@ It includes the following:
 - Vite was used for the app's creation for performance reasons instead of Create React App
 - Yup for form validation checks
 
+## Original App Purpose
+
+The App was created as part of an exercise for the bootcamp, HyperionDev and intended as a demo of my frontend skills for my portfolio.
+
+Original goals can be found in "06-011-1 Capstone Project - React App.pdf" located in the folder "Hyperion Project Documentation"
+
+It was to be React Redux based app that would allow users to add products to a cart like an online store as well as demo form validation for users logging in and registering.
+
 
 ### Install Dependencies
 
