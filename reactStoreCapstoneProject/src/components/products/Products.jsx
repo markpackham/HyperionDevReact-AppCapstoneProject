@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import ShippingHelpInfo from "./ShippingHelpInfo";
+import ProductItem from "./ProductItem";
 
 const Products = () => {
   // Grab products from store
@@ -11,9 +12,14 @@ const Products = () => {
       <ShippingHelpInfo />
       <ul className="list-group">
         {products.map((product) => (
-          <li key={product.id}>
-            {product.id} {product.name}
-          </li>
+          <ProductItem
+            description={product.description}
+            id={product.id}
+            img={product.img}
+            key={product.id}
+            name={product.name}
+            price={product.price}
+          />
         )) || <h3>Loading ...</h3>}
       </ul>
     </div>
