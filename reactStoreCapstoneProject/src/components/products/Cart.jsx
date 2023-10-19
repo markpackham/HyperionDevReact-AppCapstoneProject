@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
+import { redirect } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,8 +20,11 @@ const Cart = () => {
 
   // Shipping Purchase
   const handleEconomyClick = () => {
-    totalPrice++;
-    dispatch(emptyCart());
+    {
+      totalPrice++;
+      dispatch(emptyCart());
+    }
+    return redirect("/");
   };
 
   const handleBusinessClick = () => {
@@ -65,7 +69,7 @@ const Cart = () => {
           </button>
 
           <h4 className="mt-3">
-            Please enter the shipping reciever name, building number, street,
+            Please enter the shipping receiver name, building number, street,
             town and postcode
           </h4>
           <input

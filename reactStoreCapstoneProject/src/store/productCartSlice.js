@@ -15,7 +15,6 @@ const productCartSlice = createSlice({
         name: action.payload.name,
         price: action.payload.price,
       };
-      alert(`${action.payload.name} added to cart!`);
       state.push(newAddToCart);
     },
 
