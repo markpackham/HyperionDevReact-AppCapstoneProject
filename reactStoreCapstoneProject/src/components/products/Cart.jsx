@@ -37,10 +37,12 @@ const Cart = () => {
     <>
       <h1>Products In Cart</h1>
       <ShippingHelpInfo />
-      {productCart.length > 0 && (
+      {productCart.length > 0 ? (
         <h4>
           Number of Items in cart {productCart.length} costing £{totalPrice}
         </h4>
+      ) : (
+        <h3>There are no items in the cart</h3>
       )}
       <ul className="list-group">
         {productCart.map((product) => (
@@ -54,21 +56,32 @@ const Cart = () => {
           />
         )) || <h3>Loading ...</h3>}
       </ul>
-      <button onClick={handleEmptyCartClick} className="btn btn-danger">
-        Empty Cart
-      </button>
-      <h3 className="mt-2">
-        Shipping Options - Click one to make your purchase
-      </h3>
-      <button onClick={handleEconomyClick} className="btn btn-secondary">
-        Economy £1
-      </button>
-      <button onClick={handleBusinessClick} className="btn btn-primary">
-        Business £5
-      </button>
-      <button onClick={handlePremiumClick} className="btn btn-warning">
-        Premium £10
-      </button>
+
+      {/* Hide if no items in cart */}
+      {productCart.length > 0 && (
+        <>
+          <button onClick={handleEmptyCartClick} className="btn btn-danger">
+            Empty Cart
+          </button>
+          <h4 className="mt-2">
+            Shipping Options - Click one to make your purchase
+          </h4>
+          <input
+            type="text"
+            placeholder="Enter your shipping address"
+            className="form-control m-2"
+          />
+          <button onClick={handleEconomyClick} className="btn btn-secondary">
+            Economy £1
+          </button>
+          <button onClick={handleBusinessClick} className="btn btn-primary">
+            Business £5
+          </button>
+          <button onClick={handlePremiumClick} className="btn btn-warning">
+            Premium £10
+          </button>
+        </>
+      )}
     </>
   );
 };
