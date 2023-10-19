@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
-import { redirect } from "react-router-dom";
+import { useRef } from "react";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,27 +19,51 @@ const Cart = () => {
   };
 
   // Shipping Purchase
+  const shippingAddressRef = useRef("");
+
   const handleEconomyClick = () => {
-    {
-      totalPrice++;
+    totalPrice++;
+    const shippingAddress = shippingAddressRef.current.value;
+    if (shippingAddress.length > 5) {
+      alert(
+        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
+      );
       dispatch(emptyCart());
+    } else {
+      alert("Please enter a shipping address");
     }
-    return redirect("/");
   };
 
   const handleBusinessClick = () => {
     totalPrice += 5;
-    dispatch(emptyCart());
+    const shippingAddress = shippingAddressRef.current.value;
+    if (shippingAddress.length > 5) {
+      alert(
+        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
+      );
+      dispatch(emptyCart());
+    } else {
+      alert("Please enter a shipping address");
+    }
   };
 
   const handlePremiumClick = () => {
     totalPrice += 10;
-    dispatch(emptyCart());
+    const shippingAddress = shippingAddressRef.current.value;
+    if (shippingAddress.length > 5) {
+      alert(
+        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
+      );
+      dispatch(emptyCart());
+    } else {
+      alert("Please enter a shipping address");
+    }
   };
 
   return (
     <>
       <h1>Products In Cart</h1>
+
       <ShippingHelpInfo />
       {productCart.length > 0 ? (
         <h4>
@@ -78,7 +102,9 @@ const Cart = () => {
             type="text"
             placeholder="Enter your shipping address"
             className="form-control m-2"
+            ref={shippingAddressRef}
           />
+
           <h4 className="mt-2">
             Shipping Options - Click one to make your purchase
           </h4>
