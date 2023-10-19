@@ -26,7 +26,7 @@ const ProductItem = ({ description, img, name, price }) => {
   return (
     <>
       <li className="list-group-item">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-around">
           <span className="m-1">£{price}</span>
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
@@ -41,7 +41,7 @@ const ProductItem = ({ description, img, name, price }) => {
           {/* Remove button access if user logged out */}
           {userName !== "Logged out" && (
             <button onClick={handleAddToCartClick} className="btn btn-success">
-              Add To Cart
+              Add to Cart
             </button>
           )}
         </div>

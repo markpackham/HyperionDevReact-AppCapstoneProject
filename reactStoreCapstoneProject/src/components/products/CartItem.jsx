@@ -15,7 +15,7 @@ const CartItem = ({ description, id, img, name, price }) => {
   return (
     <>
       <li className="list-group-item">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-around">
           <span className="m-1">£{price}</span>
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
