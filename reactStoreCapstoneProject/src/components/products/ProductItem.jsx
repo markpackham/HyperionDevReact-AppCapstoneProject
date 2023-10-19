@@ -30,7 +30,14 @@ const ProductItem = ({ description, img, name, price }) => {
           <span className="m-1">£{price}</span>
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
-          <img className="product-img" src={img} alt={name} />
+          <img
+            className="product-img"
+            src={img}
+            alt={name}
+            // data-toggle="tooltip"
+            // data-placement="bottom"
+            title={name}
+          />
           {/* Remove button access if user logged out */}
           {userName !== "Logged out" && (
             <button onClick={handleAddToCartClick} className="btn btn-success">

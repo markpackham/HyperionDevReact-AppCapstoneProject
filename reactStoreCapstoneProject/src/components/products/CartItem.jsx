@@ -19,7 +19,7 @@ const CartItem = ({ description, id, img, name, price }) => {
           <span className="m-1">£{price}</span>
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
-          <img className="product-img" src={img} alt={name} />
+          <img className="product-img" src={img} alt={name} title={name} />
           <button onClick={handleDeleteClick} className="btn btn-danger">
             Delete
           </button>
