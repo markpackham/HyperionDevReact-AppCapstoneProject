@@ -1,13 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
+import { emptyCart } from "../../store/productCartSlice";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+
   // Grab products from store
   const productCart = useSelector((state) => state.productCart);
 
   // Show total price in cart
   const totalPrice = productCart.reduce((acc, item) => acc + item.price, 0);
+
+  const handleEmptyCartClick = () => {
+    // Pass in id as payload so correct product is deleted
+    dispatch(emptyCart());
+  };
 
   return (
     <>
@@ -30,7 +38,10 @@ const Cart = () => {
           />
         )) || <h3>Loading ...</h3>}
       </ul>
-      <h3>Shipping Options</h3>
+      <button onClick={handleEmptyCartClick} className="btn btn-danger">
+        Empty Cart
+      </button>
+      <h3 className="mt-2">Shipping Options</h3>
       <button className="btn btn-secondary">Economy £1</button>
       <button className="btn btn-primary">Business £5</button>
       <button className="btn btn-warning">Premium £10</button>

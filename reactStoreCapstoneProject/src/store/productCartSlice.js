@@ -23,9 +23,15 @@ const productCartSlice = createSlice({
     deleteProduct: (state, action) => {
       return state.filter((product) => product.id !== action.payload.id);
     },
+
+    // Empty entire cart
+    emptyCart: (state) => {
+      alert("Cart emptied!");
+      return state.filter((product) => product.id === "Clear everything out");
+    },
   },
 });
 
-export const { addToCart, deleteProduct } = productCartSlice.actions;
+export const { addToCart, deleteProduct, emptyCart } = productCartSlice.actions;
 
 export default productCartSlice.reducer;
