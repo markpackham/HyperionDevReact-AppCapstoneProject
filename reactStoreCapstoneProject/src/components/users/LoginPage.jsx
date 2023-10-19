@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { setUserName } from "../../store/userSlice";
@@ -6,6 +7,8 @@ import "../../styles/users.css";
 
 export default function LoginPage() {
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   // Formik used for user feedback
   const formik = useFormik({
@@ -25,6 +28,8 @@ export default function LoginPage() {
     onSubmit: () => {
       // Update Header with user login username
       dispatch(setUserName(formik.values.userName));
+      // Redirect user to Product page
+      navigate("/products");
     },
   });
   return (
