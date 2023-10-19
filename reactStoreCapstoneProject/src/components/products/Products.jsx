@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import ProductItem from "./ProductItem";
+import CartTotal from "./CartTotal";
 
 const Products = () => {
   // Grab products from store
@@ -14,11 +15,7 @@ const Products = () => {
   return (
     <div>
       <h1>Products</h1>
-      {productCart.length > 0 && (
-        <h4>
-          Number of Items in cart {productCart.length} costing £{totalPrice}
-        </h4>
-      )}
+      <CartTotal />
       <ul className="list-group">
         {products.map((product) => (
           <ProductItem

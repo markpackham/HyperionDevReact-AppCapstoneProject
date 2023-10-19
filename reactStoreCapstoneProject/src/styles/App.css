@@ -3,6 +3,7 @@
   --box-shadow-main: 7px 4px 4px hsl(0, 1%, 48%);
   --box-shadow-secondary: 4px 3px 3px hsl(0, 1%, 48%);
   --card-bg-color: hsl(60, 45%, 78%);
+  --card-bg-color-secondary: hsl(60, 59%, 75%);
 }
 
 body {
@@ -38,6 +39,14 @@ button,
 
 .btn:hover {
   background-color: hsl(58, 31%, 50%);
+}
+
+.cartTotal {
+  background-color: var(--card-bg-color-secondary);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-main);
+  margin: 5px;
+  padding: 5px;
 }
 
 footer {
