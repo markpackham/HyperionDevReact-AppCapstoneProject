@@ -14,8 +14,13 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <h1>React Store Capstone</h1>
+    <header className="mt-2">
+      <h1>
+        React Store Capstone{" "}
+        <span>
+          <img src="/public/images/storeLogo.png" alt="logo" id="storeLogo" />
+        </span>
+      </h1>
       <h5>
         User: {userName} {/* Hide logout button unless logged in */}
         {userName !== "Logged out" && (

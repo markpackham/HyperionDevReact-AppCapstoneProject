@@ -18,6 +18,7 @@ The App was created as part of an exercise for the bootcamp, HyperionDev and int
 Original goals can be found in "06-011-1 Capstone Project - React App.pdf" located in the folder "Hyperion Project Documentation"
 
 It was to be React Redux based app that would allow users to add products to a cart like an online store as well as demo form validation for users logging in and registering.
+You can only buy products if you are logged in or registered - if it says "Logged out" then the "Add To Cart" button isn't there.
 
 The user is presented with a list of products that they can add to a cart which shows the total price. They can then select the shipping where all the selected products get purchased.
 More info about the shipping can be found by clicking on the button "Shipping Info" which presents the info in some modals.

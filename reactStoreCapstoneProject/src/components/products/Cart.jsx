@@ -61,6 +61,7 @@ const Cart = () => {
   return (
     <>
       <h1>Products in Cart</h1>
+      <hr />
 
       <ShippingHelpInfo />
       <CartTotal />

@@ -1,10 +1,14 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { addToCart } from "../../store/productCartSlice";
+
 import "../../styles/products.css";
 
 const ProductItem = ({ description, img, name, price }) => {
   const dispatch = useDispatch();
+
+  // Grab user from store
+  const userName = useSelector((state) => state.userName.userName);
 
   //Add to cart array
   const handleAddToCartClick = () => {
@@ -27,9 +31,12 @@ const ProductItem = ({ description, img, name, price }) => {
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
           <img className="product-img" src={img} alt={name} />
-          <button onClick={handleAddToCartClick} className="btn btn-success">
-            Add To Cart
-          </button>
+          {/* Remove button access if use logged out */}
+          {userName !== "Logged out" && (
+            <button onClick={handleAddToCartClick} className="btn btn-success">
+              Add To Cart
+            </button>
+          )}
         </div>
       </li>
     </>
