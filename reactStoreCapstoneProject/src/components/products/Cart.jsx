@@ -63,14 +63,21 @@ const Cart = () => {
           <button onClick={handleEmptyCartClick} className="btn btn-danger">
             Empty Cart
           </button>
-          <h4 className="mt-2">
-            Shipping Options - Click one to make your purchase
+
+          <h4 className="mt-3">
+            Please enter the shipping reciever name, building number, street,
+            town and postcode
           </h4>
           <input
+            id="shippingAddress"
+            name="shippingAddress"
             type="text"
             placeholder="Enter your shipping address"
             className="form-control m-2"
           />
+          <h4 className="mt-2">
+            Shipping Options - Click one to make your purchase
+          </h4>
           <button onClick={handleEconomyClick} className="btn btn-secondary">
             Economy £1
           </button>
