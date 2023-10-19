@@ -1,10 +1,9 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
-import { useRef } from "react";
 import CartTotal from "./CartTotal";
-import { useState } from "react";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -22,11 +21,9 @@ const Cart = () => {
 
   // Shipping Purchase Options
   const [shippingAddress, setShippingAddress] = useState("");
-  const shippingAddressRef = useRef("");
 
   const handleEconomyClick = () => {
     totalPrice++;
-    const shippingAddress = shippingAddressRef.current.value;
     if (shippingAddress.length > 5) {
       alert(
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
@@ -39,7 +36,6 @@ const Cart = () => {
 
   const handleBusinessClick = () => {
     totalPrice += 5;
-    const shippingAddress = shippingAddressRef.current.value;
     if (shippingAddress.length > 5) {
       alert(
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
@@ -52,7 +48,6 @@ const Cart = () => {
 
   const handlePremiumClick = () => {
     totalPrice += 10;
-    const shippingAddress = shippingAddressRef.current.value;
     if (shippingAddress.length > 5) {
       alert(
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
@@ -65,7 +60,7 @@ const Cart = () => {
 
   return (
     <>
-      <h1>Products In Cart</h1>
+      <h1>Products in Cart</h1>
 
       <ShippingHelpInfo />
       <CartTotal />
@@ -91,7 +86,7 @@ const Cart = () => {
 
           <h4 className="mt-3">
             Please enter the shipping receiver name, building number, street,
-            town and postcode
+            town and postcode.
           </h4>
           <input
             id="shippingAddress"
@@ -99,7 +94,6 @@ const Cart = () => {
             type="text"
             placeholder="Enter your shipping address"
             className="form-control m-2"
-            ref={shippingAddressRef}
             onChange={(e) => setShippingAddress(e.target.value)}
           />
 
