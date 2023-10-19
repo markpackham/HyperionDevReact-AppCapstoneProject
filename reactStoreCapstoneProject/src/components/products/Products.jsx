@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ProductItem from "./ProductItem";
 import CartTotal from "./CartTotal";
 
@@ -15,8 +16,9 @@ const Products = () => {
       <hr />
       {/* Only logged in users can buy products */}
       {userName === "Logged out" && (
-        <h5 className="m-1">
-          Please make sure you are logged in or registered to buy products.
+        <h5 className="m-2">
+          Please make sure you are either <Link to="/login">logged in</Link> or
+          are <Link to="/register">registered</Link> to buy products.
         </h5>
       )}
       <CartTotal />

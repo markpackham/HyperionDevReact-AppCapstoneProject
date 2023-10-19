@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 
 const Home = () => {
@@ -15,7 +16,8 @@ const Home = () => {
       </div>
       {userName === "Logged out" && (
         <h5 className="m-2">
-          Please make sure you are logged in or registered to buy products.
+          Please make sure you are either <Link to="/login">logged in</Link> or
+          are <Link to="/register">registered</Link> to buy products.
         </h5>
       )}
     </div>
