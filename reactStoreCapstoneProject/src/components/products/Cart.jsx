@@ -21,6 +21,11 @@ const Cart = () => {
   // Wipe out entire cart
   const handleEmptyCartClick = () => {
     dispatch(emptyCart());
+    Swal.fire({
+      title: `Cart emptied out!`,
+      icon: "info",
+    });
+    navigate("/products");
   };
 
   // Shipping Purchase Options
@@ -40,7 +45,10 @@ const Cart = () => {
       dispatch(emptyCart());
       navigate("/products");
     } else {
-      alert("Please enter a shipping address");
+      Swal.fire({
+        text: `Please enter a shipping address`,
+        icon: "warning",
+      });
     }
   };
 
@@ -55,7 +63,10 @@ const Cart = () => {
       dispatch(emptyCart());
       navigate("/products");
     } else {
-      alert("Please enter a shipping address");
+      Swal.fire({
+        text: `Please enter a shipping address`,
+        icon: "warning",
+      });
     }
   };
 
@@ -70,7 +81,10 @@ const Cart = () => {
       dispatch(emptyCart());
       navigate("/products");
     } else {
-      alert("Please enter a shipping address");
+      Swal.fire({
+        text: `Please enter a shipping address`,
+        icon: "warning",
+      });
     }
   };
 

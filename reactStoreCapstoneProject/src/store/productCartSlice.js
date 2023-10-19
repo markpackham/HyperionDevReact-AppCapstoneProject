@@ -25,7 +25,7 @@ const productCartSlice = createSlice({
 
     // Empty entire cart
     emptyCart: (state) => {
-      alert("Cart emptied!");
+      // Product id doesn't exist so everything gets wiped out
       return state.filter((product) => product.id === "Clear everything out");
     },
   },
