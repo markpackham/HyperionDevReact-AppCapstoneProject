@@ -116,8 +116,8 @@ const Cart = () => {
             name="shippingAddress"
             type="text"
             placeholder="Enter your shipping address"
-            className="form-control m-2"
             onChange={(e) => setShippingAddress(e.target.value)}
+            className="form-control m-2"
           />
         </>
       )}

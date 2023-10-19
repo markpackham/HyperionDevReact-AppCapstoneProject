@@ -5,9 +5,9 @@ const ShippingHelpInfo = () => {
       <div
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"
-        className="modal fade"
         id="exampleModalToggle"
         tabIndex="-1"
+        className="modal fade"
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
@@ -17,9 +17,9 @@ const ShippingHelpInfo = () => {
               </h5>
               <button
                 aria-label="Close"
-                className="btn-close"
                 data-bs-dismiss="modal"
                 type="button"
+                className="btn-close"
               ></button>
             </div>
             <div className="modal-body">
@@ -35,18 +35,18 @@ const ShippingHelpInfo = () => {
             </div>
             <div className="modal-footer">
               <button
-                className="btn btn-info"
                 data-bs-target="#exampleModalToggle2"
                 data-bs-toggle="modal"
+                className="btn btn-info"
               >
                 More Shipping Info{" "}
                 <i className="fa-solid fa-arrow-right fa-sm"></i>
               </button>
               <button
                 aria-label="Close"
-                className="btn btn-secondary"
                 data-bs-dismiss="modal"
                 type="button"
+                className="btn btn-secondary"
               >
                 Close <i className="fa-solid fa-x fa-sm"></i>
               </button>
@@ -88,9 +88,9 @@ const ShippingHelpInfo = () => {
             </div>
             <div className="modal-footer">
               <button
-                className="btn btn-info"
                 data-bs-target="#exampleModalToggle"
                 data-bs-toggle="modal"
+                className="btn btn-info"
               >
                 Back To Main Info{" "}
                 <i className="fa-solid fa-arrow-left fa-sm"></i>
@@ -109,10 +109,10 @@ const ShippingHelpInfo = () => {
       </div>
       <div className="interests-btn-container mb-4">
         <a
-          className="btn btn-info"
           data-bs-toggle="modal"
           href="#exampleModalToggle"
           role="button"
+          className="btn btn-info"
         >
           Shipping Info <i className="fa-solid fa-question fa-sm"></i>
         </a>

@@ -24,7 +24,7 @@ const Header = () => {
       <h5>
         User: {userName} {/* Hide logout button unless logged in */}
         {userName !== "Logged out" && (
-          <button className="btn btn-secondary" onClick={handleLogout}>
+          <button onClick={handleLogout} className="btn btn-secondary">
             Logout
           </button>
         )}
