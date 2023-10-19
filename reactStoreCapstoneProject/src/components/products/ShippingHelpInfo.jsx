@@ -24,8 +24,8 @@ const ShippingHelpInfo = () => {
             </div>
             <div className="modal-body">
               <p>
-                We have some great shipping options available. Here are you
-                choices.
+                We have some great shipping options available. As soon as you
+                click one your purchase is made. Here are you choices.
               </p>
               <ul>
                 <li>Economy: Delivery in 10 days and costs £1</li>
