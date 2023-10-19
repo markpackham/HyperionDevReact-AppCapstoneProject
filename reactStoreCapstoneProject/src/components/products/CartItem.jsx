@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { deleteProduct } from "../../store/productCartSlice";
 import "../../styles/products.css";
 
+// CartItem gets fed into Cart page
 const CartItem = ({ description, id, img, name, price }) => {
   const dispatch = useDispatch();
 

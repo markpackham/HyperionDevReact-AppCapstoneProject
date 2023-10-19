@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// User gained via login or register
 const initialState = {
   userName: "Logged out",
 };

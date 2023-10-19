@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ProductItem from "./ProductItem";
 import CartTotal from "./CartTotal";
 
+// Products page
 const Products = () => {
   // Grab user from store
   const userName = useSelector((state) => state.userName.userName);

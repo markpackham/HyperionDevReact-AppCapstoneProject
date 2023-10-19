@@ -1,7 +1,7 @@
 const ShippingHelpInfo = () => {
   return (
     <>
-      {/* Bootstrap modal */}
+      {/* Bootstrap modal with helpful info on Shipping costs & terms of service */}
       <div
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"

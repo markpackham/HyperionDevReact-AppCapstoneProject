@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { addToCart } from "../../store/productCartSlice";
-
 import "../../styles/products.css";
 
+// ProductItem gets fed into Products page
 const ProductItem = ({ description, img, name, price }) => {
   const dispatch = useDispatch();
 
@@ -14,7 +14,7 @@ const ProductItem = ({ description, img, name, price }) => {
   const handleAddToCartClick = () => {
     const cartProduct = {
       description: description,
-      // Make sure every item added to cart has a unique id
+      // Make sure every item added to cart has a unique id, needed for keys & deletions
       id: crypto.randomUUID(),
       img: img,
       name: name,
@@ -31,7 +31,7 @@ const ProductItem = ({ description, img, name, price }) => {
           <span className="m-1 fw-bold">{name}</span>
           <span className="m-1">{description}</span>
           <img className="product-img" src={img} alt={name} />
-          {/* Remove button access if use logged out */}
+          {/* Remove button access if user logged out */}
           {userName !== "Logged out" && (
             <button onClick={handleAddToCartClick} className="btn btn-success">
               Add To Cart

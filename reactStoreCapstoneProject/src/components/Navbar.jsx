@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+// Sitewide Navbar lives in Header and Footer
 export default function Navbar() {
-  // Grab user from store
   const userName = useSelector((state) => state.userName.userName);
 
   return (

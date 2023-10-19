@@ -5,6 +5,7 @@ import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
 import CartTotal from "./CartTotal";
 
+// Cart page
 const Cart = () => {
   const dispatch = useDispatch();
 

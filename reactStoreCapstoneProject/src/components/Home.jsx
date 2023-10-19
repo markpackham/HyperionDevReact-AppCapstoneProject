@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/home.css";
 
 const Home = () => {
-  // Grab user from store
   const userName = useSelector((state) => state.userName.userName);
 
   return (
@@ -14,6 +13,7 @@ const Home = () => {
       <div className="storeImageContainer">
         <img id="storeImage" src="/images/store.jpg" alt="store image" />
       </div>
+      {/* Encourage user to login to buy stuff */}
       {userName === "Logged out" && (
         <h5 className="m-2">
           Please make sure you are either <Link to="/login">logged in</Link> or
