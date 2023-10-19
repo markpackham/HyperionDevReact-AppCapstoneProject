@@ -29,14 +29,12 @@ const ProductItem = ({ description, img, name, price }) => {
         <div className="d-flex justify-content-around">
           <span className="m-1">£{price}</span>
           <span className="m-1 fw-bold">{name}</span>
-          <span className="m-1">{description}</span>
+          <span className="productDescription m-1">{description}</span>
           <img
-            className="product-img"
             src={img}
             alt={name}
-            // data-toggle="tooltip"
-            // data-placement="bottom"
-            title={name}
+            title={description}
+            className="productImg"
           />
           {/* Remove button access if user logged out */}
           {userName !== "Logged out" && (
