@@ -5,10 +5,20 @@ const Products = () => {
   // Grab products from store
   const products = useSelector((state) => state.products);
 
+  // Grab products from store
+  const productCart = useSelector((state) => state.productCart);
+
+  // Show total price in cart
+  const totalPrice = productCart.reduce((acc, item) => acc + item.price, 0);
+
   return (
     <div>
       <h1>Products</h1>
-
+      {productCart.length > 0 && (
+        <h4>
+          Number of Items in cart {productCart.length} costing £{totalPrice}
+        </h4>
+      )}
       <ul className="list-group">
         {products.map((product) => (
           <ProductItem
