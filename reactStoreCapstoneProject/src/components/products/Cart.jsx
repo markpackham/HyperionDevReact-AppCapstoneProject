@@ -111,6 +111,7 @@ const Cart = () => {
             Please enter the shipping receiver name, building number, street,
             town and postcode.
           </h5>
+          {/* Avoid using Formik & Yup for validation, gets too messy when dealing with state & using a form*/}
           <input
             id="shippingAddress"
             name="shippingAddress"
