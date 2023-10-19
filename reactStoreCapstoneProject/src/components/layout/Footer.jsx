@@ -1,8 +1,11 @@
+import Navbar from "../Navbar";
+
 const Footer = () => {
   const currentYear = new Date(Date.now());
 
   return (
     <footer className="m-2">
+      <Navbar />
       <p className="fst-italic">
         Copyright Mark Packham {currentYear.getFullYear()}
       </p>

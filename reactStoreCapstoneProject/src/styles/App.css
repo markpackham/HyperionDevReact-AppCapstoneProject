@@ -1,6 +1,7 @@
 :root {
   --background-color-main: hsl(60, 15%, 72%);
-  --box-shadow-main: 10px 5px 5px hsl(0, 1%, 48%);
+  --box-shadow-main: 7px 4px 4px hsl(0, 1%, 48%);
+  --box-shadow-secondary: 4px 3px 3px hsl(0, 1%, 48%);
   --card-bg-color: hsl(60, 45%, 78%);
 }
 
@@ -22,6 +23,13 @@ a:hover {
 
 label {
   font-weight: bold;
+}
+
+button,
+.btn {
+  box-shadow: var(--box-shadow-secondary);
+  height: 40px;
+  margin: 5px;
 }
 
 .btn {

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import ShippingHelpInfo from "./ShippingHelpInfo";
 
 const Cart = () => {
   // Grab products from store
@@ -11,6 +12,7 @@ const Cart = () => {
   return (
     <>
       <h1>Products In Cart</h1>
+      <ShippingHelpInfo />
       {productCart.length > 0 && (
         <h4>
           Number of Items in cart {productCart.length} costing £{totalPrice}
@@ -28,6 +30,10 @@ const Cart = () => {
           />
         )) || <h3>Loading ...</h3>}
       </ul>
+      <h3>Shipping Options</h3>
+      <button className="btn btn-secondary">Economy £1</button>
+      <button className="btn btn-primary">Business £5</button>
+      <button className="btn btn-warning">Premium £10</button>
     </>
   );
 };
