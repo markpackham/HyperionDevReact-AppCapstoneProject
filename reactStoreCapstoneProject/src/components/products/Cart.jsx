@@ -3,6 +3,7 @@ import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
 import { useRef } from "react";
+import CartTotal from "./CartTotal";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -65,13 +66,7 @@ const Cart = () => {
       <h1>Products In Cart</h1>
 
       <ShippingHelpInfo />
-      {productCart.length > 0 ? (
-        <h4>
-          Number of Items in cart {productCart.length} costing £{totalPrice}
-        </h4>
-      ) : (
-        <h3>There are no items in the cart</h3>
-      )}
+      <CartTotal />
       <ul className="list-group">
         {productCart.map((product) => (
           <CartItem

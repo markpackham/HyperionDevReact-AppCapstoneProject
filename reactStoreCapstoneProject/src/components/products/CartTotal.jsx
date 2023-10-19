@@ -8,13 +8,15 @@ const CartTotal = () => {
   const totalPrice = productCart.reduce((acc, item) => acc + item.price, 0);
 
   return (
-    <div className="cartTotal">
+    <>
       {productCart.length > 0 && (
-        <h4>
-          Number of Items in cart: {productCart.length} costing £{totalPrice}
-        </h4>
+        <div className="cartTotal">
+          <h5>
+            Number of Items in cart: {productCart.length} costing £{totalPrice}
+          </h5>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
