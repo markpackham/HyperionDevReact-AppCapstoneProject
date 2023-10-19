@@ -4,6 +4,7 @@ import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
 import { useRef } from "react";
 import CartTotal from "./CartTotal";
+import { useState } from "react";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,8 @@ const Cart = () => {
     dispatch(emptyCart());
   };
 
-  // Shipping Purchase
+  // Shipping Purchase Options
+  const [shippingAddress, setShippingAddress] = useState("");
   const shippingAddressRef = useRef("");
 
   const handleEconomyClick = () => {
@@ -98,20 +100,29 @@ const Cart = () => {
             placeholder="Enter your shipping address"
             className="form-control m-2"
             ref={shippingAddressRef}
+            onChange={(e) => setShippingAddress(e.target.value)}
           />
 
-          <h4 className="mt-2">
-            Shipping Options - Click one to make your purchase
-          </h4>
-          <button onClick={handleEconomyClick} className="btn btn-secondary">
-            Economy £1
-          </button>
-          <button onClick={handleBusinessClick} className="btn btn-primary">
-            Business £5
-          </button>
-          <button onClick={handlePremiumClick} className="btn btn-warning">
-            Premium £10
-          </button>
+          {/* Do not show buttons until an address has been entered */}
+          {shippingAddress.length > 5 && (
+            <>
+              <h4 className="mt-2">
+                Shipping Options - Click one to make your purchase
+              </h4>
+              <button
+                onClick={handleEconomyClick}
+                className="btn btn-secondary"
+              >
+                Economy £1
+              </button>
+              <button onClick={handleBusinessClick} className="btn btn-primary">
+                Business £5
+              </button>
+              <button onClick={handlePremiumClick} className="btn btn-warning">
+                Premium £10
+              </button>
+            </>
+          )}
         </>
       )}
     </>
