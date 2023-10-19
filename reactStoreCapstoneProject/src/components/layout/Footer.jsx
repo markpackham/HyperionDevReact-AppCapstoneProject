@@ -4,12 +4,16 @@ const Footer = () => {
   const currentYear = new Date(Date.now());
 
   return (
-    <footer className="m-2">
-      <Navbar />
-      <p className="fst-italic">
-        Copyright Mark Packham {currentYear.getFullYear()}
-      </p>
-    </footer>
+    <>
+      <div className="sticky-bottom mt-2">
+        <Navbar />
+      </div>
+      <footer className="m-2">
+        <p className="fst-italic">
+          Copyright Mark Packham {currentYear.getFullYear()}
+        </p>
+      </footer>
+    </>
   );
 };
 
