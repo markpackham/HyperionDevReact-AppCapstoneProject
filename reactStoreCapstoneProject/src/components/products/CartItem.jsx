@@ -15,9 +15,9 @@ const CartItem = ({ description, id, img, name, price }) => {
     <>
       <li className="list-group-item">
         <div className="d-flex justify-content-between">
-          <span>£{price}</span>
-          <span>{name}</span>
-          <span>{description}</span>
+          <span className="m-1">£{price}</span>
+          <span className="m-1 fw-bold">{name}</span>
+          <span className="m-1">{description}</span>
           <img className="product-img" src={img} alt={name} />
           <button onClick={handleDeleteClick} className="btn btn-danger">
             Delete

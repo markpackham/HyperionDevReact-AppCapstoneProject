@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <header>
       <h1>React Store Capstone</h1>
-      <h4>
+      <h5>
         User: {userName} {/* Hide logout button unless logged in */}
         {userName !== "Logged out" && (
           <button className="btn btn-secondary" onClick={handleLogout}>
             Logout
           </button>
         )}
-      </h4>
+      </h5>
       <Navbar />
     </header>
   );

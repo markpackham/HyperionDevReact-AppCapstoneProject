@@ -84,23 +84,10 @@ const Cart = () => {
             Empty Cart
           </button>
 
-          <h4 className="mt-3">
-            Please enter the shipping receiver name, building number, street,
-            town and postcode.
-          </h4>
-          <input
-            id="shippingAddress"
-            name="shippingAddress"
-            type="text"
-            placeholder="Enter your shipping address"
-            className="form-control m-2"
-            onChange={(e) => setShippingAddress(e.target.value)}
-          />
-
           {/* Do not show buttons until an address has been entered */}
           {shippingAddress.length > 5 && (
             <>
-              <h4 className="mt-2">
+              <h4 className="mt-1">
                 Shipping Options - Click one to make your purchase
               </h4>
               <button
@@ -117,6 +104,19 @@ const Cart = () => {
               </button>
             </>
           )}
+
+          <h5 className="mt-1">
+            Please enter the shipping receiver name, building number, street,
+            town and postcode.
+          </h5>
+          <input
+            id="shippingAddress"
+            name="shippingAddress"
+            type="text"
+            placeholder="Enter your shipping address"
+            className="form-control m-2"
+            onChange={(e) => setShippingAddress(e.target.value)}
+          />
         </>
       )}
     </>
