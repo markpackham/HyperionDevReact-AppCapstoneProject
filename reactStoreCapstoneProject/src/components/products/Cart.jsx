@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
@@ -8,6 +9,7 @@ import CartTotal from "./CartTotal";
 // Cart page
 const Cart = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // Grab products from store
   const productCart = useSelector((state) => state.productCart);
@@ -30,6 +32,7 @@ const Cart = () => {
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
       );
       dispatch(emptyCart());
+      navigate("/products");
     } else {
       alert("Please enter a shipping address");
     }
@@ -42,6 +45,7 @@ const Cart = () => {
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
       );
       dispatch(emptyCart());
+      navigate("/products");
     } else {
       alert("Please enter a shipping address");
     }
@@ -54,6 +58,7 @@ const Cart = () => {
         `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
       );
       dispatch(emptyCart());
+      navigate("/products");
     } else {
       alert("Please enter a shipping address");
     }
