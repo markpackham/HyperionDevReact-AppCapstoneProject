@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { addToCart } from "../../store/productCartSlice";
 import "../../styles/products.css";
 
-const ProductItem = ({ description, id, img, name, price }) => {
+const ProductItem = ({ description, img, name, price }) => {
   const dispatch = useDispatch();
 
   //Add to cart array
