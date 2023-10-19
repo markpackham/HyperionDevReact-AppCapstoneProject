@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import LoginPage from "./components/users/LoginPage";
 import Products from "./components/products/Products";
 import Cart from "./components/products/Cart";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         <Route exact path="/products" element={<Products />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route exact path="/register" element={<RegisterPage />} />
+        {/* 404 page */}
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>
