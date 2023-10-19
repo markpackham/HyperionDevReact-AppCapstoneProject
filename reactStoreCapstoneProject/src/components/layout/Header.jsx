@@ -18,7 +18,7 @@ const Header = () => {
       <h1>
         React Store Capstone{" "}
         <span>
-          <img src="/public/images/storeLogo.png" alt="logo" id="storeLogo" />
+          <img src="/images/storeLogo.png" alt="logo" id="storeLogo" />
         </span>
       </h1>
       <h5>

@@ -31,8 +31,10 @@ const Cart = () => {
   // Shipping Purchase Options
   const [shippingAddress, setShippingAddress] = useState("");
 
-  const handleEconomyClick = () => {
-    totalPrice++;
+  // Shipping choice is based on price
+  const handleShippingClick = (price) => {
+    totalPrice += price;
+    // Check an address has actually been entered in the input field
     if (shippingAddress.length > 5) {
       // Sweetalert2 learned from
       // How to use sweetalert2 in a react application | react and Sweet Alert (2023) YouTube.
@@ -52,47 +54,10 @@ const Cart = () => {
     }
   };
 
-  const handleBusinessClick = () => {
-    totalPrice += 5;
-    if (shippingAddress.length > 5) {
-      Swal.fire({
-        title: `Total cost £${totalPrice}`,
-        text: `Items shipped to ${shippingAddress}`,
-        icon: "success",
-      });
-      dispatch(emptyCart());
-      navigate("/products");
-    } else {
-      Swal.fire({
-        text: `Please enter a shipping address`,
-        icon: "warning",
-      });
-    }
-  };
-
-  const handlePremiumClick = () => {
-    totalPrice += 10;
-    if (shippingAddress.length > 5) {
-      Swal.fire({
-        title: `Total cost £${totalPrice}`,
-        text: `Items shipped to ${shippingAddress}`,
-        icon: "success",
-      });
-      dispatch(emptyCart());
-      navigate("/products");
-    } else {
-      Swal.fire({
-        text: `Please enter a shipping address`,
-        icon: "warning",
-      });
-    }
-  };
-
   return (
     <>
       <h1>Products in Cart</h1>
       <hr />
-
       <ShippingHelpInfo />
       <CartTotal />
       <ul className="list-group">
@@ -122,15 +87,21 @@ const Cart = () => {
                 Shipping Options - Click one to make your purchase
               </h4>
               <button
-                onClick={handleEconomyClick}
+                onClick={() => handleShippingClick(1)}
                 className="btn btn-secondary"
               >
                 Economy £1
               </button>
-              <button onClick={handleBusinessClick} className="btn btn-primary">
+              <button
+                onClick={() => handleShippingClick(5)}
+                className="btn btn-primary"
+              >
                 Business £5
               </button>
-              <button onClick={handlePremiumClick} className="btn btn-warning">
+              <button
+                onClick={() => handleShippingClick(10)}
+                className="btn btn-warning"
+              >
                 Premium £10
               </button>
             </>

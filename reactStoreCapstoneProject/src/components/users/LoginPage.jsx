@@ -7,7 +7,6 @@ import "../../styles/users.css";
 
 export default function LoginPage() {
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
   // Formik used for user feedback
