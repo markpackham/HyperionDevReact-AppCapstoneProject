@@ -8,6 +8,7 @@ It includes the following:
 - React frontend to register, login, products & cart
 - React Redux to handle state
 - React Router Dom for site navigation
+- Sweetalert2 for better looking alert messages
 - Vite was used for the app's creation for performance reasons instead of Create React App
 - Yup for form validation checks
 

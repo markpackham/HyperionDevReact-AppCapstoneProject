@@ -75,10 +75,6 @@ const productSlice = createSlice({
       img: "https://api-prod.royaldesign.se/api/products/image/6/koziol-crystal-glass-l-0",
     },
   ],
-
-  reducers: {},
 });
-
-// export const {  } = productSlice.actions;
 
 export default productSlice.reducer;
