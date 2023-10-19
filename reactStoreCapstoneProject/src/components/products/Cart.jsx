@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Swal from "sweetalert2";
 import CartItem from "./CartItem";
 import ShippingHelpInfo from "./ShippingHelpInfo";
 import { emptyCart } from "../../store/productCartSlice";
@@ -28,9 +29,14 @@ const Cart = () => {
   const handleEconomyClick = () => {
     totalPrice++;
     if (shippingAddress.length > 5) {
-      alert(
-        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
-      );
+      // Sweetalert2 learned from
+      // How to use sweetalert2 in a react application | react and Sweet Alert (2023) YouTube.
+      // Available at: https://www.youtube.com/watch?v=6sFSj6QQqL8 (Accessed: 19 October 2023).
+      Swal.fire({
+        title: `Total cost £${totalPrice}`,
+        text: `Items shipped to ${shippingAddress}`,
+        icon: "success",
+      });
       dispatch(emptyCart());
       navigate("/products");
     } else {
@@ -41,9 +47,11 @@ const Cart = () => {
   const handleBusinessClick = () => {
     totalPrice += 5;
     if (shippingAddress.length > 5) {
-      alert(
-        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
-      );
+      Swal.fire({
+        title: `Total cost £${totalPrice}`,
+        text: `Items shipped to ${shippingAddress}`,
+        icon: "success",
+      });
       dispatch(emptyCart());
       navigate("/products");
     } else {
@@ -54,9 +62,11 @@ const Cart = () => {
   const handlePremiumClick = () => {
     totalPrice += 10;
     if (shippingAddress.length > 5) {
-      alert(
-        `Total cost £${totalPrice} and items shipped to ${shippingAddress}`
-      );
+      Swal.fire({
+        title: `Total cost £${totalPrice}`,
+        text: `Items shipped to ${shippingAddress}`,
+        icon: "success",
+      });
       dispatch(emptyCart());
       navigate("/products");
     } else {
