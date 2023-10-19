@@ -19,6 +19,9 @@ Original goals can be found in "06-011-1 Capstone Project - React App.pdf" locat
 
 It was to be React Redux based app that would allow users to add products to a cart like an online store as well as demo form validation for users logging in and registering.
 
+The user is presented with a list of products that they can add to a cart which shows the total price. They can then select the shipping where all the selected products get purchased.
+More info about the shipping can be found by clicking on the button "Shipping Info" which presents the info in some modals.
+
 
 ### Install Dependencies
 
