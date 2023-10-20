@@ -63,7 +63,7 @@ const Cart = () => {
       <hr />
       <div className="storeImageContainer">
         <img
-          id="kitchenUtensils"
+          className="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils3.jpg"
           alt="kitchen utensils"
           title="React Store Capstone Kitchen Utensils"
