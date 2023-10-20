@@ -88,15 +88,15 @@ ul {
   max-width: 900px;
 }
 
+.kitchenUtensils,
+.storeImage {
+  max-width: 250px;
+}
+
 .navbar {
   background: rgb(249, 244, 132);
   background: linear-gradient(90deg, rgba(249, 244, 132, 1) 0%, rgba(244, 239, 113, 1) 35%, rgba(235, 229, 95, 1) 100%);
   box-shadow: var(--box-shadow-main);
-}
-
-
-#kitchenUtensils {
-  max-width: 300px;
 }
 
 .storeImageContainer {

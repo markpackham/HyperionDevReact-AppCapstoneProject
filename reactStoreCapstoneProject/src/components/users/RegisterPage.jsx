@@ -57,7 +57,7 @@ export default function RegisterPage() {
       <hr />
       <div className="storeImageContainer">
         <img
-          id="kitchenUtensils"
+          className="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils4.jpg"
           alt="kitchen utensils"
           title="React Store Capstone Kitchen Utensils"

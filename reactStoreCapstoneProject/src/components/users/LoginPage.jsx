@@ -41,7 +41,7 @@ export default function LoginPage() {
       <hr />
       <div className="storeImageContainer">
         <img
-          id="kitchenUtensils"
+          className="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils5.jpg"
           alt="kitchen utensils"
           title="React Store Capstone Kitchen Utensils"

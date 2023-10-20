@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-// Styles
-import "../styles/home.css";
-
 const Home = () => {
   const userName = useSelector((state) => state.userName.userName);
 
@@ -21,7 +18,7 @@ const Home = () => {
       )}
       <div className="storeImageContainer">
         <img
-          id="storeImage"
+          className="storeImage"
           src="/images/store.jpg"
           alt="store image"
           title="React Store Capstone"
@@ -29,7 +26,7 @@ const Home = () => {
       </div>
       <div className="storeImageContainer">
         <img
-          id="kitchenUtensils"
+          className="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils1.jpg"
           alt="kitchen utensils"
           title="React Store Capstone Kitchen Utensils"
@@ -45,7 +42,7 @@ const Home = () => {
       </p>
       <div className="storeImageContainer">
         <img
-          id="kitchenUtensils2"
+          className="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils6.jpg"
           alt="kitchen utensils"
           title="React Store Capstone Kitchen Utensils"
@@ -64,7 +61,15 @@ const Home = () => {
         ducimus, quidem culpa itaque accusantium at assumenda ut id veritatis in
         ratione labore illum laborum exercitationem corporis! Ut, nihil dicta.
       </p>
-      <h6 className="text-center">Privacy Policy</h6>
+      <div className="storeImageContainer">
+        <img
+          className="kitchenUtensils"
+          src="/images/kitchen_utensils/kitchenUtensils7.jpg"
+          alt="kitchen utensils"
+          title="React Store Capstone Kitchen Utensils"
+        />
+      </div>
+      <h6 className="mt-2 text-center">Privacy Policy</h6>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odit
         ducimus, quidem culpa itaque accusantium at assumenda ut id veritatis in
