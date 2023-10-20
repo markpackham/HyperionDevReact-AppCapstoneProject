@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Swal from "sweetalert2";
 
 // Products in the cart
 const productCartSlice = createSlice({
@@ -15,6 +16,10 @@ const productCartSlice = createSlice({
         name: action.payload.name,
         price: action.payload.price,
       };
+      Swal.fire({
+        title: `£${action.payload.price} ${action.payload.name} added!`,
+        icon: "success",
+      });
       state.push(newAddToCart);
     },
 

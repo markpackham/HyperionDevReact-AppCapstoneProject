@@ -44,7 +44,7 @@ const Cart = () => {
       // Available at: https://www.youtube.com/watch?v=6sFSj6QQqL8 (Accessed: 19 October 2023).
       Swal.fire({
         title: `Total cost £${totalPrice}`,
-        text: `Items shipped to ${shippingAddress}`,
+        text: `Items shipped to: ${shippingAddress}`,
         icon: "success",
       });
       dispatch(emptyCart());
