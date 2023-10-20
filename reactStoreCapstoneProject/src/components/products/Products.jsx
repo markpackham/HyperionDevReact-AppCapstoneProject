@@ -17,7 +17,7 @@ const Products = () => {
     <div>
       <h1>Products</h1>
       <hr />
-      <div className="storeImageContainer mt-2">
+      <div className="storeImageContainer">
         <img
           id="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils2.jpg"

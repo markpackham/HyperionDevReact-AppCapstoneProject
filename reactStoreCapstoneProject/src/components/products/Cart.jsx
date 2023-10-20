@@ -61,7 +61,7 @@ const Cart = () => {
     <>
       <h1>Products in Cart</h1>
       <hr />
-      <div className="storeImageContainer mt-2">
+      <div className="storeImageContainer">
         <img
           id="kitchenUtensils"
           src="/images/kitchen_utensils/kitchenUtensils3.jpg"

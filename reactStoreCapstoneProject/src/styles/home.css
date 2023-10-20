@@ -1,6 +1,7 @@
 #storeImage,
-#kitchenUtensils {
-    max-width: 400px;
+#kitchenUtensils,
+#kitchenUtensils2 {
+    max-width: 350px;
 }
 
 .storeImageContainer {

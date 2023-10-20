@@ -39,6 +39,15 @@ export default function LoginPage() {
     <>
       <h1>Login</h1>
       <hr />
+      <div className="storeImageContainer">
+        <img
+          id="kitchenUtensils"
+          src="/images/kitchen_utensils/kitchenUtensils5.jpg"
+          alt="kitchen utensils"
+          title="React Store Capstone Kitchen Utensils"
+        />
+      </div>
+
       <form onSubmit={formik.handleSubmit}>
         <div className="column">
           <label htmlFor="lastName">Username</label>

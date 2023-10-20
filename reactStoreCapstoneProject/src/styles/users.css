@@ -1,14 +1,3 @@
 form {
     max-width: 500px;
 }
-
-#storeImage,
-#kitchenUtensils {
-    max-width: 300px;
-}
-
-.storeImageContainer {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    text-align: center;
-}

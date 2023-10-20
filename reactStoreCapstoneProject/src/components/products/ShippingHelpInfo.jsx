@@ -32,6 +32,7 @@ const ShippingHelpInfo = () => {
                 <li>Business: Delivery in 5 days and costs £5</li>
                 <li>Premium: Delivery in 3 days and costs £10</li>
               </ul>
+              <p>I am afraid we only ship to the UK.</p>
             </div>
             <div className="modal-footer">
               <button
@@ -83,7 +84,8 @@ const ShippingHelpInfo = () => {
               </p>
               <p>
                 Call us at +7712387659 if you are missing any items or wish to
-                raise a complaint.
+                raise a complaint or give us a positive review. We always love
+                hearing back from our customers.
               </p>
             </div>
             <div className="modal-footer">

@@ -94,6 +94,17 @@ ul {
   box-shadow: var(--box-shadow-main);
 }
 
+
+#kitchenUtensils {
+  max-width: 300px;
+}
+
+.storeImageContainer {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+
 /* Media Queries */
 @media screen and (max-width: 991px) {
   nav ul {
