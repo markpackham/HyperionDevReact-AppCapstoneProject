@@ -84,7 +84,7 @@ export default function LoginPage() {
         </div>
 
         <button className="btn btn-primary" type="submit">
-          Submit
+          Login
         </button>
       </form>
     </>
