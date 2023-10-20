@@ -94,11 +94,7 @@ const Cart = () => {
           {/* Do not show buttons until an address has been entered */}
           {shippingAddress.length > 5 && (
             <>
-              <ShippingOptions
-                handleEmptyCartClick={handleEmptyCartClick}
-                handleShippingClick={handleShippingClick}
-                shippingAddress={shippingAddress}
-              />
+              <ShippingOptions handleShippingClick={handleShippingClick} />
             </>
           )}
 

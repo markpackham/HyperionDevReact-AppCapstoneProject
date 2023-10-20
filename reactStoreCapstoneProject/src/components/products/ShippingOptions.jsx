@@ -1,8 +1,7 @@
-const ShippingOptions = ({
-  handleEmptyCartClick,
-  handleShippingClick,
-  shippingAddress,
-}) => {
+import PropTypes from "prop-types";
+
+// Buttons that purchase the cart items & add shipping cost
+const ShippingOptions = ({ handleShippingClick }) => {
   return (
     <>
       <h4 className="mt-1">
@@ -28,6 +27,10 @@ const ShippingOptions = ({
       </button>
     </>
   );
+};
+
+ShippingOptions.propTypes = {
+  handleShippingClick: PropTypes.func.isRequired,
 };
 
 export default ShippingOptions;
