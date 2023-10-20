@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import CartItem from "./CartItem";
@@ -60,6 +60,14 @@ const Cart = () => {
       <hr />
       <ShippingHelpInfo />
       <CartTotal />
+
+      {productCart.length === 0 && (
+        <h5>
+          There are no items in the cart, if you have logged in or registered
+          please go to <Link to="/products">products</Link> to add some.
+        </h5>
+      )}
+
       <ul className="list-group">
         {productCart.map((product) => (
           <CartItem
