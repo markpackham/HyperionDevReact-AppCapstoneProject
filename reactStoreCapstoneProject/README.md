@@ -36,27 +36,25 @@ node --version
 
 ### Install Dependencies
 
+This is done within the "reactStoreCapstoneProject" folder
+
 ```
-npm install
-cd frontend
 npm install
 ```
 
 ### Run
 
 ```
-# Run
 npm run dev
 ```
 
+Or you can run it via
 ```
-# Or Run
 npm run start
 ```
 
 ## Build & Deploy
 
 ```
-cd frontend
 npm run build
 ```
