@@ -20,7 +20,7 @@ const productCartSlice = createSlice({
         title: `£${action.payload.price} ${action.payload.name} added!`,
         icon: "success",
       });
-      state.push(newAddToCart);
+      return [...state, newAddToCart];
     },
 
     // Delete Product
