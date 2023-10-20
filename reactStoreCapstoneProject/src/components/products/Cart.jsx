@@ -2,10 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import CartItem from "./CartItem";
-import ShippingHelpInfo from "./ShippingHelpInfo";
+
+// Components & Store
 import { emptyCart } from "../../store/productCartSlice";
+import CartItem from "./CartItem";
 import CartTotal from "./CartTotal";
+import ShippingHelpInfo from "./ShippingHelpInfo";
+import ShippingOptions from "./ShippingOptions";
 
 // Cart page
 const Cart = () => {
@@ -91,27 +94,11 @@ const Cart = () => {
           {/* Do not show buttons until an address has been entered */}
           {shippingAddress.length > 5 && (
             <>
-              <h4 className="mt-1">
-                Shipping Options - Click one to make your purchase
-              </h4>
-              <button
-                onClick={() => handleShippingClick(1)}
-                className="btn btn-secondary"
-              >
-                Economy £1
-              </button>
-              <button
-                onClick={() => handleShippingClick(5)}
-                className="btn btn-primary"
-              >
-                Business £5
-              </button>
-              <button
-                onClick={() => handleShippingClick(10)}
-                className="btn btn-warning"
-              >
-                Premium £10
-              </button>
+              <ShippingOptions
+                handleEmptyCartClick={handleEmptyCartClick}
+                handleShippingClick={handleShippingClick}
+                shippingAddress={shippingAddress}
+              />
             </>
           )}
 

@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
+// Styles
 import "../styles/home.css";
 
 const Home = () => {

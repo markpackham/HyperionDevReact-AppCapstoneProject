@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
+// Components & Store
 import ProductItem from "./ProductItem";
 import CartTotal from "./CartTotal";
 

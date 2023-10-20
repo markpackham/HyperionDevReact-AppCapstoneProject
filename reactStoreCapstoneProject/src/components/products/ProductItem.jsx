@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
+
+// Components & Store
 import { addToCart } from "../../store/productCartSlice";
+
+// Styles
 import "../../styles/products.css";
 
 // ProductItem gets fed into Products page

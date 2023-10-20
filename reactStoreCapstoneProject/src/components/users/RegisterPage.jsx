@@ -2,7 +2,11 @@ import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+
+// Components & Store
 import { setUserName } from "../../store/userSlice";
+
+// Styles
 import "../../styles/users.css";
 
 export default function RegisterPage() {
