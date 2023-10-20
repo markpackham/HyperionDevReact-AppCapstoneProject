@@ -17,6 +17,14 @@ const Products = () => {
     <div>
       <h1>Products</h1>
       <hr />
+      <div className="storeImageContainer mt-2">
+        <img
+          id="kitchenUtensils"
+          src="/images/kitchen_utensils/kitchenUtensils2.jpg"
+          alt="kitchen utensils"
+          title="React Store Capstone Kitchen Utensils"
+        />
+      </div>
       {/* Only logged in users can buy products */}
       {userName === "Logged out" && (
         <h5 className="m-2">

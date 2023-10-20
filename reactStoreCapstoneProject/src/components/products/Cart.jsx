@@ -61,6 +61,14 @@ const Cart = () => {
     <>
       <h1>Products in Cart</h1>
       <hr />
+      <div className="storeImageContainer mt-2">
+        <img
+          id="kitchenUtensils"
+          src="/images/kitchen_utensils/kitchenUtensils3.jpg"
+          alt="kitchen utensils"
+          title="React Store Capstone Kitchen Utensils"
+        />
+      </div>
       <ShippingHelpInfo />
       <CartTotal />
 

@@ -1,7 +1,10 @@
-#storeImage {
+#storeImage,
+#kitchenUtensils {
     max-width: 400px;
 }
 
 .storeImageContainer {
+    margin-bottom: 5px;
+    margin-top: 5px;
     text-align: center;
 }

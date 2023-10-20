@@ -1,5 +1,15 @@
+#kitchenUtensils {
+    max-width: 300px;
+}
+
 .productImg {
     max-width: 100px;
+}
+
+.storeImageContainer {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
 }
 
 /* Media Queries */

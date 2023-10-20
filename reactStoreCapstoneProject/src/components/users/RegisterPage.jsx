@@ -55,6 +55,14 @@ export default function RegisterPage() {
     <>
       <h1>Register</h1>
       <hr />
+      <div className="storeImageContainer">
+        <img
+          id="kitchenUtensils"
+          src="/images/kitchen_utensils/kitchenUtensils4.jpg"
+          alt="kitchen utensils"
+          title="React Store Capstone Kitchen Utensils"
+        />
+      </div>
       <h5>
         Passwords must be at least 8 characters long, have at least 1 upper case
         and 1 lower case letter and have at least 1 special character eg `!`.
