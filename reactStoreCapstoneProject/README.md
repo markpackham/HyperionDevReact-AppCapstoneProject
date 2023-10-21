@@ -34,9 +34,18 @@ Code was written in Node.JS version 20, you should at least have Node version 18
 node --version
 ```
 
+## Get Project Code
+
+All code can be downloaded from here along with the original goals of the project.
+https://github.com/markpackham/HyperionReact-AppCapstoneProject
+
+```
+git clone https://github.com/markpackham/HyperionReact-AppCapstoneProject.git
+```
+
 ### Install Dependencies
 
-This is done within the "reactStoreCapstoneProject" folder
+This is done within the "reactStoreCapstoneProject" folder which is inside "HyperionReact AppCapstoneProject"
 
 ```
 npm install
