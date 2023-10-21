@@ -48,6 +48,7 @@ git clone https://github.com/markpackham/HyperionReact-AppCapstoneProject.git
 This is done within the "reactStoreCapstoneProject" folder which is inside "HyperionReact AppCapstoneProject"
 
 ```
+cd reactStoreCapstoneProject
 npm install
 ```
 
