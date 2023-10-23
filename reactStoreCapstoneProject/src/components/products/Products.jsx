@@ -25,6 +25,7 @@ const Products = () => {
           title="React Store Capstone Kitchen Utensils"
         />
       </div>
+
       {/* Only logged in users can buy products */}
       {userName === "Logged out" && (
         <h5 className="m-2">
@@ -32,8 +33,13 @@ const Products = () => {
           are <Link to="/register">registered</Link> to buy products.
         </h5>
       )}
+
       <CartTotal />
+
       <ul className="list-group">
+        {/* Will say loading if it takes a while to gets items from the ProductItem component 
+        so user will know app hasn't just frozen
+        */}
         {products.map((product) => (
           <ProductItem
             description={product.description}

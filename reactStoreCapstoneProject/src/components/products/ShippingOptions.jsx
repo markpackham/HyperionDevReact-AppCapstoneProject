@@ -7,6 +7,9 @@ const ShippingOptions = ({ handleShippingClick }) => {
       <h4 className="mt-1">
         Shipping Options - Click one to make your purchase
       </h4>
+      {/* The Price/Number if the deciding factor over the type of shipping rather than using a name 
+      as the argument
+      */}
       <button
         onClick={() => handleShippingClick(1)}
         className="btn btn-secondary"
@@ -29,6 +32,7 @@ const ShippingOptions = ({ handleShippingClick }) => {
   );
 };
 
+// Make sure we have the function handleShippingClick or this won't work
 ShippingOptions.propTypes = {
   handleShippingClick: PropTypes.func.isRequired,
 };

@@ -1,7 +1,11 @@
 const ShippingHelpInfo = () => {
   return (
     <>
-      {/* Bootstrap modal with helpful info on Shipping costs & terms of service */}
+      {/* Bootstrap modal with helpful info on Shipping costs & terms of service 
+      has option to show more info.
+
+      First only shows a button then modal appears when clicked on
+      */}
       <div
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"

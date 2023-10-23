@@ -24,6 +24,7 @@ const Cart = () => {
   // Wipe out entire cart
   const handleEmptyCartClick = () => {
     dispatch(emptyCart());
+    // Use Sweetalert2 for attractive looking popups
     Swal.fire({
       title: `Cart emptied out!`,
       icon: "info",
@@ -72,6 +73,7 @@ const Cart = () => {
       <ShippingHelpInfo />
       <CartTotal />
 
+      {/* If cart has no items in the array tell use the cart is empty and where to go */}
       {productCart.length === 0 && (
         <h5>
           There are no items in the cart, if you have logged in or registered
@@ -92,7 +94,7 @@ const Cart = () => {
         )) || <h3>Loading ...</h3>}
       </ul>
 
-      {/* Hide if no items in cart */}
+      {/* Hide if no items in cart of this part is a waste of the user's time */}
       {productCart.length > 0 && (
         <>
           <button onClick={handleEmptyCartClick} className="btn btn-danger">
