@@ -13,6 +13,7 @@ const ShippingHelpInfo = () => {
         tabIndex="-1"
         className="modal fade"
       >
+        {/* Main info section */}
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
@@ -66,6 +67,7 @@ const ShippingHelpInfo = () => {
         aria-labelledby="exampleModalToggleLabel2"
         tabIndex="-1"
       >
+        {/* More Info Section */}
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">
@@ -113,6 +115,7 @@ const ShippingHelpInfo = () => {
           </div>
         </div>
       </div>
+      {/* Button that shows the modal */}
       <div className="interests-btn-container mb-4">
         <a
           data-bs-toggle="modal"

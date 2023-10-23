@@ -9,6 +9,7 @@ import { setUserName } from "../../store/userSlice";
 // Styles
 import "../../styles/users.css";
 
+// As soon as a user Registered they are considered logged in and can purchase items
 export default function RegisterPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

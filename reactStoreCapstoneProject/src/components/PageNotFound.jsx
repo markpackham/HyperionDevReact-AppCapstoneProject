@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// Will show on any url that isn't used by the other components
 const PageNotFound = () => {
   return (
     <>

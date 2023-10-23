@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+// Main landing page
 const Home = () => {
   const userName = useSelector((state) => state.userName.userName);
 
