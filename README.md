@@ -29,9 +29,23 @@ More info about the shipping can be found by clicking on the button "Shipping In
 
 ## Requirements
 
-Code was written in Node.JS version 20, you should at least have Node version 18 installed.
-Code was able to run on Windows 11, Mac OS 14 and Ubuntu 22.04.3 LTS
+Code was written in Node.JS version 20 but runs fine on Node 18, Node should be at the very least version 18.
 
+Works with these operating systems 
+- Mac OS 14 
+- Ubuntu 22.04.3 LTS
+- Windows 11
+
+Works with these browsers: 
+- Brave 1.59.122
+- Firefox 118.02
+- Google Chrome 118.0.5993.89
+- LibreWolf 118.0.2-1
+- Microsoft Edge 119.0.2151.12
+- Safari 17
+
+
+## Check node version
 ```
 node --version
 ```
