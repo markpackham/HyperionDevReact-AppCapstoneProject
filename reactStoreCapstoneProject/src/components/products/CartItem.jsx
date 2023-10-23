@@ -38,6 +38,9 @@ const CartItem = ({ description, id, img, name, price }) => {
   );
 };
 
+// Use PropTypes to make sure CartItem not only gets the required props from the component passing them
+// down but also makes sure they are the correct type eg String for name and Number for price
+// ESLint advises I use PropTypes so I can be warned if my definitions don't match
 CartItem.propTypes = {
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
