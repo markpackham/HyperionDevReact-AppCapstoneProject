@@ -2,8 +2,9 @@
 
 It includes the following:
 
+- Bootstrap is used for modals and styling and included via the React Bootstrap UI library
+- Font Awesome's CDN is used to provide icons
 - Formik for form validation feedback
-- React Bootstrap UI library
 - React frontend to register, login, products & cart
 - React Redux to handle state
 - React Router Dom for site navigation
@@ -49,18 +50,13 @@ This is done within the "reactStoreCapstoneProject" folder which is inside "Hype
 
 ```
 cd reactStoreCapstoneProject
-npm install
+npm i
 ```
 
 ### Run
 
 ```
 npm run dev
-```
-
-Or you can run it via
-```
-npm run start
 ```
 
 ## Build & Deploy
