@@ -3,6 +3,7 @@
 It includes the following:
 
 - Bootstrap is used for modals and styling and included via the React Bootstrap UI library
+- Concurrently is used so a simple "npm start" will install all modules and run the app at the same time
 - Font Awesome's CDN is used to provide icons
 - Formik for form validation feedback
 - React frontend to register, login, products & cart
