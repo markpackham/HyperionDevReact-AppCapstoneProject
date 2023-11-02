@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import DOMPurify from "dompurify";
 import * as Yup from "yup";
 
 // Components & Store
@@ -32,7 +33,7 @@ export default function LoginPage() {
     }),
     onSubmit: () => {
       // Update Header with user login username
-      dispatch(setUserName(formik.values.userName));
+      dispatch(setUserName(DOMPurify.sanitize(formik.values.userName)));
       // Redirect user to Product page
       navigate("/products");
     },
